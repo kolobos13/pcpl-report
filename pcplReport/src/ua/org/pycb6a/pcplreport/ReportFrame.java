@@ -219,7 +219,7 @@ public class ReportFrame extends JFrame {
 					POIFSFileSystem fisTemp = new POIFSFileSystem(
 							new FileInputStream("pcplReport_res/template/template.xls"));
 					HSSFWorkbook hwb = new HSSFWorkbook(fisTemp, true);
-					HSSFSheet sheet = hwb.getSheet("Детальный отчет");
+					HSSFSheet sheet = hwb.getSheet("Р”РµС‚Р°Р»СЊРЅС‹Р№ РѕС‚С‡РµС‚");
 
 					int rowIn = 1;
 					while (products.readRecord()) {
@@ -276,7 +276,7 @@ public class ReportFrame extends JFrame {
 					fos.close();
 
 					JOptionPane.showMessageDialog(ReportFrame.this, fileOutput
-							+ " создан.");
+							+ " СЃРѕР·РґР°РЅ.");
 					Runtime.getRuntime().exec("cmd.exe /r " + fileOutput);
 
 				}
@@ -284,16 +284,16 @@ public class ReportFrame extends JFrame {
 				catch (Exception e) {
 
 					JOptionPane.showMessageDialog(ReportFrame.this,
-							"Что-то не так.");
+							"Р§С‚Рѕ-С‚Рѕ РЅРµ С‚Р°Рє.");
 
 				}
 			} else
 				JOptionPane.showMessageDialog(ReportFrame.this,
-						"Выберите XLS-файл.");
+						"Р’С‹Р±РµСЂРёС‚Рµ XLS-С„Р°Р№Р».");
 
 		} else
 			JOptionPane.showMessageDialog(ReportFrame.this,
-					"Выберите CSV-файл.");
+				  "Р’С‹Р±РµСЂРёС‚Рµ CSV-С„Р°Р№Р».");
 	}
 
 }
